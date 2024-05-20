@@ -1,0 +1,136 @@
+/* Global Styles */
+body {
+    width: 100%;
+    background: lightgray;
+    margin: 0; /* Remove default margin */
+    font-family: Arial, Helvetica, sans-serif; /* Apply font-family to the whole page */
+}
+
+/* Left Sidebar */
+div.left {
+    width: 15%;
+    height: 100%;
+    float: left;
+}
+
+/* Right Content */
+div.right {
+    margin-left: 10%;
+    height: 100%;
+}
+
+/* Right Content Styling */
+div.contentR {
+    margin: auto;
+    width: 85%;
+    padding-top: 5%;
+    text-align: center;
+}
+
+.contentR hr {
+    border-top: 2px solid black;
+}
+
+.contentR table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+
+.contentR th,
+.contentR td {
+    border: 2px solid black;
+    padding: 3px;
+}
+
+.contentR th {
+    background-color: lightblue;
+}
+
+.contentR h2 {
+    padding: 10px;
+}
+
+/* Left Content Styling */
+div.contentL {
+    padding-top: 20.8%;
+    float: right;
+}
+
+.contentL table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+
+.contentL td {
+    padding: 15px;
+    color: black;
+}
+
+.contentL a {
+    text-decoration: none;
+    color: rgb(38, 38, 38);
+    padding: 5px 0;
+    position: relative;
+}
+
+.contentL a:hover {
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.contentL h2 {
+    padding: 10px;
+}
+
+/* Buttons and Forms */
+.add-button {
+    float: right;
+    background: #555;
+    padding: 10px 15px;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    margin-left: 10px;
+}
+
+.add-button:hover {
+    opacity: 0.7;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    float: right;
+}
+
+.search-input {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    width: 300px;
+}
+
+.search-button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.search-input:focus {
+    outline: none;
+    box-shadow: 0 0 5px #555;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}

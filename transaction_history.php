@@ -48,29 +48,24 @@ mysqli_close($connect);
         <th>Order Date</th>
         <th>Payment Method</th>
         <th>Delivery Status</th>
-        <th>Action</th>
     </tr>
     <?php
     if (mysqli_num_rows($result) > 0) {
         // Output data of each row
         while ($row = mysqli_fetch_assoc($result)) {
-        ?>
-            <tr>
-            <td><?php echo $row["customer_name"]; ?></td>
-            <td><?php echo $row["customer_number"]; ?></td>
-            <td><?php echo $row["customer_address"]; ?></td>
-            <td><?php echo $row["product_name"]; ?></td>
-            <td><?php echo $row["total_price"]; ?></td>
-            <td><?php echo $row["order_date"]; ?></td>
-            <td><?php echo $row["payment_method"]; ?></td>
-            <td><?php echo $row["delivery_status"]; ?></td>
-            <td><a href="user(order_detail).php?detail&orderid=<?php echo $row['order_id']; ?>">View Detail</a></td></td>
-        </tr>
-
-        <?php
+            echo "<tr>";
+            echo "<td>" . $row['customer_name'] . "</td>";
+            echo "<td>" . $row['customer_number'] . "</td>";
+            echo "<td>" . $row['customer_address'] . "</td>";
+            echo "<td>" . $row['product_name'] . "</td>";
+            echo "<td>" . $row['total_price'] . "</td>";
+            echo "<td>" . $row['order_date'] . "</td>";
+            echo "<td>" . $row['payment_method'] . "</td>";
+            echo "<td>" . $row["delivery_status"] . "</td>";
+            echo "</tr>";
         }
     } else {
-        echo "<tr><td colspan='9'>No transactions found.</td></tr>";
+        echo "<tr><td colspan='7'>No transactions found.</td></tr>";
     }
     ?>
 </table>

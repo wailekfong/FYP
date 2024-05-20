@@ -120,7 +120,7 @@ tr:hover {
         <?php
         }
     } else {
-        echo "<tr><td colspan='9'>No transactions found.</td></tr>";
+        echo "<tr><td colspan='7'>No transactions found.</td></tr>";
     }
     ?>
 </table>

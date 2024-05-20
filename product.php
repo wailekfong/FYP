@@ -3,13 +3,8 @@ include("dbconnection.php");
 session_start();
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>List of Products</title>
-    <link rel="icon" type="png" href="image/dreams2.png">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/ion.rangeSlider.css">
@@ -24,11 +19,15 @@ session_start();
     <link rel="stylesheet" href="product.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl嗨⢾姞筗㵁縓狙혲絷䶜黺ࢌ鯇똯==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>List of Products</title>
+    <link rel="icon" type="png" href="image/dreams2.png">
+</head>
 <body>
-<header class="header_area sticky-header">
+    <header class="header_area sticky-header">
         <div class="main_menu">
             <nav class="navbar navbar-expand-lg navbar-light main_box">
                 <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
                     <a class="navbar-brand logo_h" href="index.php"><img src="image/dreams3.png" alt=""></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,6 +35,7 @@ session_start();
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav ml-auto">
                             <li class="nav-item active"><a class="nav-link" href="index.php">Home</a></li>
@@ -51,8 +51,8 @@ session_start();
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                                     aria-expanded="false">About Us</a>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item"><a class="nav-link" href="contactus.php">Contact Us</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="aboutus.php">About Us</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item submenu dropdown">
@@ -63,6 +63,7 @@ session_start();
                                     <li class="nav-item"><a class="nav-link" href="transaction_history.php">Transaction History</a></li>
                                 </ul>
                             </li>
+                            <!-- Display Log Out option if user is logged in -->
                             <?php if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true): ?>
                                 <li class="nav-item"><a href="user_profile.php"><span class="nav-link">Welcome, <?php echo $_SESSION['name']; ?></span></li>
                                 <li class="nav-item"><a class="nav-link" href="logout.php">Log Out</a></li>
@@ -90,7 +91,7 @@ session_start();
             </div>
         </div>
     </header>
-    
+
     <h1>List of Products</h1>
 
     <table border="1" width="650px">
@@ -99,7 +100,6 @@ session_start();
             <th>Product Name</th>
             <th>Product Price</th>
             <th>Product Stock</th>
-            <th>Product Size</th>
             <th>Product Image</th>
             <th>Product Details</th>    
             <th>Action</th>
@@ -115,7 +115,6 @@ session_start();
                 <td><?php echo $row["product_name"]; ?></td>
                 <td><?php echo $row["product_price"]; ?></td>
                 <td><?php echo ($row["product_stock"] > 0) ? "In Stock" : "Out of Stock"; ?></td>
-                <td><?php echo $row["product_size"]; ?></td>
                 <td><img src="<?php echo $row["product_image"]; ?>" alt="Product Image" style="width: 100px;"></td>
                 <td><?php echo $row["product_details"]; ?></td>
                 <td><a href="purchase.php?buy&productid=<?php echo $row['product_id']; ?>">Buy Now</a></td>
@@ -133,5 +132,20 @@ session_start();
     
     <?php @include 'footer.php'; ?>
     
+    <script src="js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+     crossorigin="anonymous"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/nouislider.min.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <!--gmaps Js-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+    <script src="js/gmaps.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
