@@ -12,7 +12,7 @@
             <div class="footer__widget">
                 <h6>Contact Us</h6>
                 <ul>
-                    <li><a href="#">Email: dreamsstationUWU@gmail.com</a></li>
+                    <li><a href="#">Email: cnctravel7079@gmail.com</a></li>
                     <li><a href="#">Phone: +601110997079</a></li>
                     <!-- Add more contact info if needed -->
                 </ul>
@@ -20,7 +20,7 @@
             <div class="footer__widget">
                 <h6>Follow Us</h6>
                 <ul>
-                    <li><a href="https://www.instagram.com/dreamsstation_official?igsh=bnQwNjhqZGl1bWpw" class="fa-brands fa-instagram" data-text="Instagram"></a></li>
+                    <li><a href="https://www.instagram.com/cnc_travel7079?igsh=MW8zZzM1dTlxOGtjag==" class="fa-brands fa-instagram" data-text="Instagram"></a></li>
                     <li><a href="#" class="fa-brands fa-twitter" data-text="Twitter"></a></li>
                     <li><a href="#" class="fa-brands fa-youtube" data-text="Youtube"></a></li>
                     <li><a href="#" class="fa-brands fa-facebook" data-text="Facebook"></a></li>
@@ -28,7 +28,7 @@
                 </ul>
             </div>
             <div class="footer__widget">
-                <h6>Subscribe to DreamsStation</h6>
+                <h6>Subscribe to Newsletter</h6>
                 <div class="footer__newslatter">
                     <p>Be the first to know about new arrivals, sales, and more!</p>
                     <form action="#">

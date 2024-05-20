@@ -35,12 +35,12 @@ if ($stmt = $con->prepare('SELECT register_id, register_password FROM register W
         } 
         else 
         {
-            echo '<script>alert("Incorrect Username and/or password!");window.location = "login.html";</script>';
+            echo 'Incorrect username and/or password!';
         }
     } 
     else 
     {
-        echo '<script>alert("Incorrect Username and/or password!");window.location = "login.html";</script>';
+        echo 'Incorrect Username and/or password!';
     }
 	$stmt->close();
 }
