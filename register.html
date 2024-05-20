@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="icon" type="png" href="image/dreams2.png">
+    <link rel="stylesheet" type="text/css" href="register.css">
+</head>
+<body>
+    <div class="register">
+    <h1>REGISTER</h1>
+    <form action="register.php" method="post">
+        <label for="username">
+                <span>Username</span>
+        </label>
+        <input type="text" name="username" placeholder="Username" id="username" required><br><br>
+        <label for="contact">
+                <span>Contact</span>
+        </label>
+        <input type="tel" name="contact" placeholder="Contact Number" id="contact" pattern="[0-9]{3}-[0-9]{7,8}" required><br><br>
+        <label for="email">
+                <span>Email</span>
+        </label>
+        <input type="email" name ="email" placeholder="Email" id="email" required><br><br>
+        <label for="password">
+                <span>Password</span>
+        </label>
+        <input type="password" name ="password" placeholder="Password" id="password" 
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" required><br><br>
+        <label for="confirm_password">
+                <span>Confirm Password</span>
+        </label>
+        <input type="password" name ="confirm_password" placeholder="Enter Password Again" id="confirm_password" required><br><br>
+        <input type="submit" value="Register Now" id="submit">
+        <script>
+                var password1 = document.getElementById("password");
+                var password2 = document.getElementById("confirm_password");
+                var submit = document.getElementById("submit");
+            
+                submit.onclick = function() {
+                    if (password1.value != password2.value) {
+                        alert("Error! Confirm password does not match");
+                        return false;
+                    } else {
+                        alert("Register successful!");
+                    }
+                }
+        </script>  
+            
+    </form>
+</div>
+</body>
+</html>

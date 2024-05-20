@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2; /* Background color for the body */
+}
+
+h1 {
+    font-size: 24px;
+    color: #333; /* Color for headings */
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.product-item {
+    position: relative;
+    background-color: #fff; /* Background color for product items */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.product-image img {
+    max-width: 100%;
+    height: 200px; /* Set a fixed height for all images */
+    object-fit: cover; /* Ensure images maintain aspect ratio and cover the container */
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-details h2 {
+    margin-top: 0;
+}
+
+.add-to-cart-btn {
+    background-color: #007bff; /* Background color for Add to Cart button */
+    color: #fff; /* Text color for Add to Cart button */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    position: relative; /* Change to relative */
+    margin-top: 20px; /* Add margin to separate from product details */
+}
+
+.product-item:hover .add-to-cart-btn {
+    display: block;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #0056b3; /* Background color on hover for Add to Cart button */
+}
+
+.original-price {
+    color: #000; /* Set original price color to black */
+}
+
+.has-discount .original-price {
+    color: #888; /* Set original price color to gray */
+    text-decoration: line-through; /* Add line-through for original price */
+    margin-right: 5px; /* Add spacing between original and discounted price */
+}
+
+.discounted-price {
+    color: #d32f2f; /* Set color for discounted price */
+    font-weight: bold; /* Make the discounted price bold */
+}

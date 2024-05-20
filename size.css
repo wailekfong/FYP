@@ -1,0 +1,15 @@
+.product-sizes {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.product-sizes li {
+    display: inline-block;
+    margin-right: 10px; /* Adjust as needed */
+    padding: 10px; /* Adjust padding as needed */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #f9f9f9; /* Background color */
+    box-shadow: 2px 2px 5px #888888; /* Box shadow for 3D effect */
+}

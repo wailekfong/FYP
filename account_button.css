@@ -1,0 +1,15 @@
+.independent-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #c3c6c9; 
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.independent-btn:hover {
+    background-color: #0a6ad0; 
+}
